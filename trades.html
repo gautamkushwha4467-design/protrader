@@ -531,7 +531,11 @@ const totalTradesValue = document.getElementById("totalTradesValue");
             .trim();
 
         const pnl = parseFloat(text);
+        totalTrades++;
 
+if (pnl > 0) {
+    winningTrades++;
+}
         if (isNaN(pnl)) return;
 
         if (pnl >= 0) {
