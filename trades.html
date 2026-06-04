@@ -531,17 +531,20 @@ const totalTradesValue = document.getElementById("totalTradesValue");
             .trim();
 
         const pnl = parseFloat(text);
-        totalTrades++;
+
+if (isNaN(pnl)) return;
+
+totalTrades++;
 
 if (pnl > 0) {
     winningTrades++;
 }
-        if (isNaN(pnl)) return;
-        if (pnl >= 0) {
-            totalProfit += pnl;
-        } else {
-            totalLoss += pnl;
-        }
+
+if (pnl >= 0) {
+    totalProfit += pnl;
+} else {
+    totalLoss += pnl;
+}
     });
 
     const netPnl = totalProfit + totalLoss;
@@ -558,6 +561,8 @@ if (pnl > 0) {
 
     netPnlValue.textContent =
         `${netPnl >= 0 ? "+" : "-"}$${Math.abs(netPnl).toFixed(2)}`;
+    totalTradesValue.textContent = totalTrades;
+    winRateValue.textContent = `${winRate.toFixed(1)}%`;
 }
 
 if (tradeForm && tradeTableBody) {
