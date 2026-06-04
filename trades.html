@@ -479,6 +479,85 @@ if (closeTradeModal) {
 if (cancelTradeModal) {
     cancelTradeModal.addEventListener("click", closeModal);
 }
+              const tradeForm = document.getElementById("tradeForm");
+const tradeTableBody = document.getElementById("tradeTableBody");
+
+if (tradeForm && tradeTableBody) {
+    tradeForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const symbol = document.getElementById("tradeSymbol").value || "UNKNOWN";
+        const direction = document.getElementById("tradeDirection").value || "Long";
+        const rr = document.getElementById("tradeRR").value || "1:1";
+        const pnlValue = Number(document.getElementById("tradePnl").value || 0);
+
+        const today = new Date();
+        const dateText = today.toLocaleDateString("en-US", {
+            month: "short",
+            day: "2-digit",
+            year: "numeric"
+        });
+
+        const pnlClass = pnlValue >= 0 ? "text-tertiary" : "text-error";
+        const sideClass = direction === "Long" ? "bg-tertiary-container text-tertiary" : "bg-error-container text-error";
+        const statusText = pnlValue >= 0 ? "Win" : "Loss";
+
+        const newRow = document.createElement("tr");
+        newRow.className = "hover:bg-surface-bright transition-colors cursor-pointer group bg-surface-container-low/30";
+
+        newRow.innerHTML = `
+            <td class="px-unit-lg py-unit-md">
+                <div class="text-body-sm font-bold">${dateText}</div>
+                <div class="text-[10px] text-on-surface-variant">Just now</div>
+            </td>
+
+            <td class="px-unit-lg py-unit-md">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center font-bold text-[10px]">
+                        ${symbol.slice(0, 3).toUpperCase()}
+                    </div>
+                    <div class="font-bold">${symbol.toUpperCase()}</div>
+                </div>
+            </td>
+
+            <td class="px-unit-lg py-unit-md">
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold ${sideClass} uppercase">${direction}</span>
+            </td>
+
+            <td class="px-unit-lg py-unit-md font-data-mono">
+                <div>Manual</div>
+                <div class="text-on-surface-variant">Manual</div>
+            </td>
+
+            <td class="px-unit-lg py-unit-md text-right font-data-mono">Manual</td>
+
+            <td class="px-unit-lg py-unit-md text-right font-data-mono ${pnlClass} font-bold">
+                ${pnlValue >= 0 ? "+" : ""}$${Math.abs(pnlValue).toFixed(2)}
+            </td>
+
+            <td class="px-unit-lg py-unit-md text-center">
+                <span class="text-body-sm font-bold">${rr}</span>
+            </td>
+
+            <td class="px-unit-lg py-unit-md">
+                <span class="flex items-center gap-1.5 text-body-sm ${pnlClass} font-bold">
+                    <span class="w-2 h-2 rounded-full ${pnlValue >= 0 ? "bg-tertiary" : "bg-error"}"></span> ${statusText}
+                </span>
+            </td>
+
+            <td class="px-unit-lg py-unit-md text-right opacity-0 group-hover:opacity-100 transition-opacity">
+                <button class="p-1 hover:bg-surface-container-highest rounded">
+                    <span class="material-symbols-outlined text-[20px]">more_vert</span>
+                </button>
+            </td>
+        `;
+
+        tradeTableBody.prepend(newRow);
+
+        tradeForm.reset();
+        closeModal();
+    });
+}
             });
 
             // Smooth background transition on hover cards
