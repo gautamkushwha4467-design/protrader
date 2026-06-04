@@ -126,32 +126,11 @@ TopNavBar Anchor
 </div>
 <!-- SVG Chart Representation -->
 <div class="flex-1 w-full relative pt-4">
-<div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
-<div class="w-full border-t border-outline-variant/30 h-0"></div>
-<div class="w-full border-t border-outline-variant/30 h-0"></div>
-<div class="w-full border-t border-outline-variant/30 h-0"></div>
-<div class="w-full border-t border-outline-variant/30 h-0"></div>
-<div class="w-full border-t border-outline-variant/30 h-0"></div>
+  <div class="h-[320px] w-full">
+    <canvas id="equityChart"></canvas>
+  </div>
 </div>
-<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 300">
-<defs>
-<lineargradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#4edea3" stop-opacity="0.2"></stop>
-<stop offset="100%" stop-color="#4edea3" stop-opacity="0"></stop>
-</lineargradient>
-</defs>
-<path d="M0,280 L50,260 L100,275 L150,240 L200,250 L250,220 L300,230 L350,180 L400,195 L450,150 L500,170 L550,120 L600,140 L650,80 L700,100 L750,50 L800,60" fill="none" stroke="#4edea3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
-<path d="M0,280 L50,260 L100,275 L150,240 L200,250 L250,220 L300,230 L350,180 L400,195 L450,150 L500,170 L550,120 L600,140 L650,80 L700,100 L750,50 L800,60 L800,300 L0,300 Z" fill="url(#chartGradient)"></path>
-<!-- Interaction Dots -->
-<circle class="animate-pulse shadow-lg" cx="450" cy="150" fill="#4edea3" r="6"></circle>
-<circle class="animate-pulse shadow-lg" cx="750" cy="50" fill="#4edea3" r="6"></circle>
-</svg>
-<!-- Tooltip Overlay Example -->
-<div class="absolute top-[120px] left-[420px] bg-surface-bright border border-outline-variant p-2 rounded-lg shadow-xl pointer-events-none transform -translate-y-full">
-<p class="font-label-uppercase text-[10px] text-on-surface-variant mb-1">Oct 14, 2023</p>
-<p class="font-data-mono text-data-mono text-tertiary">+$842.10 (0.75%)</p>
-</div>
-</div>
+
 <div class="flex justify-between items-center mt-6 pt-6 border-t border-outline-variant">
 <div class="flex gap-8">
 <div>
@@ -328,5 +307,46 @@ TopNavBar Anchor
             });
         }
     </script>
+<script>
+window.addEventListener('load', () => {
+    const bar = document.getElementById('goalProgressBar');
+    bar.style.width = '0%';
+    setTimeout(() => {
+        bar.style.width = '75%';
+    }, 300);
+});
+</script>
+
+<script>
+window.addEventListener("load", function () {
+  const ctx = document.getElementById("equityChart");
+
+  if (!ctx) {
+    console.error("Canvas not found");
+    return;
+  }
+
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      datasets: [{
+        label: "Equity Curve",
+        data: [10000, 10400, 10250, 10800, 11200, 11050, 11800],
+        borderColor: "#4edea3",
+        backgroundColor: "rgba(78,222,163,0.15)",
+        borderWidth: 3,
+        fill: true,
+        tension: 0.4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  });
+});
+</script>
+
 </body>
 </html>
