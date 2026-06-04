@@ -546,6 +546,10 @@ if (pnl > 0) {
     });
 
     const netPnl = totalProfit + totalLoss;
+            const winRate =
+    totalTrades > 0
+        ? (winningTrades / totalTrades) * 100
+        : 0;
 
     totalProfitValue.textContent =
         `+$${totalProfit.toFixed(2)}`;
