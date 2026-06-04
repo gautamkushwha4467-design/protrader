@@ -456,6 +456,33 @@
                     console.log('Open trade details for selected row');
                 });
               });
+              rows.forEach(row => {
+    row.addEventListener('click', () => {
+        console.log('Open trade details for selected row');
+    });
+});
+
+const tradeSearchInput = document.getElementById("tradeSearchInput");
+
+if (tradeSearchInput) {
+    tradeSearchInput.addEventListener("input", () => {
+        const searchValue = tradeSearchInput.value.toLowerCase();
+        const rows = document.querySelectorAll("#tradeTableBody tr");
+
+        rows.forEach(row => {
+            const rowText = row.innerText.toLowerCase();
+
+            if (rowText.includes(searchValue)) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    });
+}
+
+const openTradeModal = document.getElementById("openTradeModal");
+const closeTradeModal = document.getElementById("closeTradeModal");
               const openTradeModal = document.getElementById("openTradeModal");
               const closeTradeModal = document.getElementById("closeTradeModal");
               const cancelTradeModal = document.getElementById("cancelTradeModal");
