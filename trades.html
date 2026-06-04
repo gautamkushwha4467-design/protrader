@@ -455,10 +455,11 @@
                     // Placeholder for row detail expansion
                     console.log('Open trade details for selected row');
                 });
+              });
               const openTradeModal = document.getElementById("openTradeModal");
-const closeTradeModal = document.getElementById("closeTradeModal");
-const cancelTradeModal = document.getElementById("cancelTradeModal");
-const tradeModal = document.getElementById("tradeModal");
+              const closeTradeModal = document.getElementById("closeTradeModal");
+              const cancelTradeModal = document.getElementById("cancelTradeModal");
+              const tradeModal = document.getElementById("tradeModal");
 
 if (openTradeModal && tradeModal) {
     openTradeModal.addEventListener("click", () => {
@@ -574,7 +575,6 @@ tradeForm.reset();
 closeModal();
     });
 }
-            });
 
             // Smooth background transition on hover cards
             const cards = document.querySelectorAll('.bg-surface-container');
