@@ -554,8 +554,24 @@ if (tradeForm && tradeTableBody) {
 
         tradeTableBody.prepend(newRow);
 
-        tradeForm.reset();
-        closeModal();
+const savedTrades =
+    JSON.parse(localStorage.getItem("protradeTrades")) || [];
+
+savedTrades.unshift({
+    symbol,
+    direction,
+    rr,
+    pnl: pnlValue,
+    date: dateText
+});
+
+localStorage.setItem(
+    "protradeTrades",
+    JSON.stringify(savedTrades)
+);
+
+tradeForm.reset();
+closeModal();
     });
 }
             });
