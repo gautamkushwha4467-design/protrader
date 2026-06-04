@@ -248,54 +248,57 @@
 </div>
 </div>
 <div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="border-b border-outline-variant">
-<th class="pb-4 font-label-uppercase text-label-uppercase text-on-surface-variant px-2">Symbol</th>
-<th class="pb-4 font-label-uppercase text-label-uppercase text-on-surface-variant px-2">Type</th>
-<th class="pb-4 font-label-uppercase text-label-uppercase text-on-surface-variant px-2">Entry</th>
-<th class="pb-4 font-label-uppercase text-label-uppercase text-on-surface-variant px-2">Exit</th>
-<th class="pb-4 font-label-uppercase text-label-uppercase text-on-surface-variant px-2">P&amp;L</th>
-<th class="pb-4 font-label-uppercase text-label-uppercase text-on-surface-variant px-2">Duration</th>
-<th class="pb-4 font-label-uppercase text-label-uppercase text-on-surface-variant px-2 text-right">Status</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-outline-variant/30">
-<tr class="hover:bg-surface-container-high/50 transition-colors group">
-<td class="py-4 px-2 font-data-mono text-on-surface">XAUUSD</td>
-<td class="py-4 px-2 font-label-uppercase text-label-uppercase text-tertiary">Long</td>
-<td class="py-4 px-2 font-data-mono text-on-surface">1942.24</td>
-<td class="py-4 px-2 font-data-mono text-on-surface">1954.80</td>
-<td class="py-4 px-2 font-data-mono text-tertiary">+$1,240.00</td>
-<td class="py-4 px-2 font-body-sm text-on-surface-variant">4h 22m</td>
-<td class="py-4 px-2 text-right">
-<span class="bg-tertiary-container/30 text-tertiary text-[10px] px-2 py-1 rounded uppercase font-bold">Closed</span>
-</td>
-</tr>
-<tr class="hover:bg-surface-container-high/50 transition-colors group">
-<td class="py-4 px-2 font-data-mono text-on-surface">NAS100</td>
-<td class="py-4 px-2 font-label-uppercase text-label-uppercase text-error">Short</td>
-<td class="py-4 px-2 font-data-mono text-on-surface">15240.5</td>
-<td class="py-4 px-2 font-data-mono text-on-surface">15305.2</td>
-<td class="py-4 px-2 font-data-mono text-error">-$650.00</td>
-<td class="py-4 px-2 font-body-sm text-on-surface-variant">12m</td>
-<td class="py-4 px-2 text-right">
-<span class="bg-error-container/30 text-error text-[10px] px-2 py-1 rounded uppercase font-bold">Closed</span>
-</td>
-</tr>
-<tr class="hover:bg-surface-container-high/50 transition-colors group">
-<td class="py-4 px-2 font-data-mono text-on-surface">GBPUSD</td>
-<td class="py-4 px-2 font-label-uppercase text-label-uppercase text-tertiary">Long</td>
-<td class="py-4 px-2 font-data-mono text-on-surface">1.25401</td>
-<td class="py-4 px-2 font-data-mono text-on-surface-variant">Running</td>
-<td class="py-4 px-2 font-data-mono text-tertiary">+$420.50</td>
-<td class="py-4 px-2 font-body-sm text-on-surface-variant">1h 45m</td>
-<td class="py-4 px-2 text-right">
-<span class="bg-secondary-container/30 text-secondary text-[10px] px-2 py-1 rounded uppercase font-bold">Active</span>
-</td>
-</tr>
-</tbody>
-</table>
+  <table class="w-full text-left border-collapse">
+    <thead>
+      <tr class="border-b border-outline-variant">
+        <th class="pb-4 px-2 text-label-uppercase font-label-uppercase text-on-surface-variant">Trade ID</th>
+        <th class="pb-4 px-2 text-label-uppercase font-label-uppercase text-on-surface-variant">Date</th>
+        <th class="pb-4 px-2 text-label-uppercase font-label-uppercase text-on-surface-variant">Symbol</th>
+        <th class="pb-4 px-2 text-label-uppercase font-label-uppercase text-on-surface-variant">Direction</th>
+        <th class="pb-4 px-2 text-label-uppercase font-label-uppercase text-on-surface-variant">RR</th>
+        <th class="pb-4 px-2 text-label-uppercase font-label-uppercase text-on-surface-variant">P&amp;L</th>
+        <th class="pb-4 px-2 text-label-uppercase font-label-uppercase text-on-surface-variant text-right">Status</th>
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-outline-variant/30">
+      <tr class="hover:bg-surface-container-high/50 transition-colors">
+        <td class="py-4 px-2 font-data-mono text-on-surface">#T001</td>
+        <td class="py-4 px-2 text-on-surface-variant">Jun 04</td>
+        <td class="py-4 px-2 font-data-mono text-on-surface">XAUUSD</td>
+        <td class="py-4 px-2 text-tertiary font-bold">Long</td>
+        <td class="py-4 px-2 text-on-surface">1:2.8</td>
+        <td class="py-4 px-2 font-data-mono text-tertiary">+$1,240</td>
+        <td class="py-4 px-2 text-right">
+          <span class="bg-tertiary-container/30 text-tertiary text-[10px] px-2 py-1 rounded uppercase font-bold">Win</span>
+        </td>
+      </tr>
+
+      <tr class="hover:bg-surface-container-high/50 transition-colors">
+        <td class="py-4 px-2 font-data-mono text-on-surface">#T002</td>
+        <td class="py-4 px-2 text-on-surface-variant">Jun 03</td>
+        <td class="py-4 px-2 font-data-mono text-on-surface">NAS100</td>
+        <td class="py-4 px-2 text-error font-bold">Short</td>
+        <td class="py-4 px-2 text-on-surface">1:1.0</td>
+        <td class="py-4 px-2 font-data-mono text-error">-$650</td>
+        <td class="py-4 px-2 text-right">
+          <span class="bg-error-container/30 text-error text-[10px] px-2 py-1 rounded uppercase font-bold">Loss</span>
+        </td>
+      </tr>
+
+      <tr class="hover:bg-surface-container-high/50 transition-colors">
+        <td class="py-4 px-2 font-data-mono text-on-surface">#T003</td>
+        <td class="py-4 px-2 text-on-surface-variant">Jun 02</td>
+        <td class="py-4 px-2 font-data-mono text-on-surface">GBPUSD</td>
+        <td class="py-4 px-2 text-tertiary font-bold">Long</td>
+        <td class="py-4 px-2 text-on-surface">1:2.1</td>
+        <td class="py-4 px-2 font-data-mono text-tertiary">+$420</td>
+        <td class="py-4 px-2 text-right">
+          <span class="bg-secondary-container/30 text-secondary text-[10px] px-2 py-1 rounded uppercase font-bold">Active</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 </section>
 </div>
