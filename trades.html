@@ -494,8 +494,18 @@ if (statusFilter) {
 }
 if (clearFiltersBtn) {
     clearFiltersBtn.addEventListener("click", () => {
-        if (tradeSearchInput) tradeSearchInput.value = "";
-        if (statusFilter) statusFilter.value = "Status: All";
+        const searchBox = document.getElementById("tradeSearchInput");
+        const statusBox = document.getElementById("statusFilter");
+
+        if (searchBox) {
+            searchBox.value = "";
+            searchBox.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+
+        if (statusBox) {
+            statusBox.selectedIndex = 0;
+            statusBox.dispatchEvent(new Event("change", { bubbles: true }));
+        }
 
         filterTrades();
     });
