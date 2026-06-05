@@ -461,23 +461,36 @@
 const tradeSearchInput = document.getElementById("tradeSearchInput");
 const statusFilter = document.getElementById("statusFilter");
 
-if (tradeSearchInput) {
-    tradeSearchInput.addEventListener("input", () => {
-        const searchValue = tradeSearchInput.value.toLowerCase();
-        const rows = document.querySelectorAll("#tradeTableBody tr");
+function filterTrades() {
+    const searchValue = tradeSearchInput ? tradeSearchInput.value.toLowerCase() : "";
+    const statusValue = statusFilter ? statusFilter.value.toLowerCase() : "status: all";
 
-        rows.forEach(row => {
-            const rowText = row.innerText.toLowerCase();
+    const rows = document.querySelectorAll("#tradeTableBody tr");
 
-            if (rowText.includes(searchValue)) {
-                row.style.display = "";
-            } else {
-                row.style.display = "none";
-            }
-        });
+    rows.forEach(row => {
+        const rowText = row.innerText.toLowerCase();
+
+        const matchesSearch = rowText.includes(searchValue);
+
+        const matchesStatus =
+            statusValue === "status: all" ||
+            rowText.includes(statusValue);
+
+        if (matchesSearch && matchesStatus) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
     });
 }
 
+if (tradeSearchInput) {
+    tradeSearchInput.addEventListener("input", filterTrades);
+}
+
+if (statusFilter) {
+    statusFilter.addEventListener("change", filterTrades);
+}
               const openTradeModal = document.getElementById("openTradeModal");
               const closeTradeModal = document.getElementById("closeTradeModal");
               const cancelTradeModal = document.getElementById("cancelTradeModal");
