@@ -466,6 +466,7 @@ const clearFiltersBtn = document.getElementById("clearFiltersBtn");
           
 function filterTrades() {
     const searchValue = tradeSearchInput ? tradeSearchInput.value.toLowerCase() : "";
+    const assetValue = assetFilter ? assetFilter.value.toLowerCase() : "all assets";
     const statusValue = statusFilter ? statusFilter.value.toLowerCase() : "status: all";
 
     const rows = document.querySelectorAll("#tradeTableBody tr");
@@ -479,14 +480,38 @@ function filterTrades() {
             statusValue === "status: all" ||
             rowText.includes(statusValue);
 
-        if (matchesSearch && matchesStatus) {
+        let matchesAsset = true;
+
+        if (assetValue === "crypto") {
+            matchesAsset =
+                rowText.includes("btc") ||
+                rowText.includes("eth") ||
+                rowText.includes("sol");
+        }
+
+        if (assetValue === "forex") {
+            matchesAsset =
+                rowText.includes("eur") ||
+                rowText.includes("usd") ||
+                rowText.includes("gbp") ||
+                rowText.includes("xau");
+        }
+
+        if (assetValue === "stocks") {
+            matchesAsset =
+                rowText.includes("nas") ||
+                rowText.includes("spy") ||
+                rowText.includes("aapl") ||
+                rowText.includes("tsla");
+        }
+
+        if (matchesSearch && matchesStatus && matchesAsset) {
             row.style.display = "";
         } else {
             row.style.display = "none";
         }
     });
 }
-
 if (tradeSearchInput) {
     tradeSearchInput.addEventListener("input", filterTrades);
 }
