@@ -508,7 +508,7 @@ function filterTrades() {
                 rowText.includes("tsla");
         }
 
-        if (matchesSearch && matchesStatus && matchesAsset) {
+        if (matchesSearch && matchesStatus && matchesAsset && matchesDate) {
             row.style.display = "";
         } else {
             row.style.display = "none";
