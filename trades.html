@@ -492,6 +492,14 @@ if (tradeSearchInput) {
 if (statusFilter) {
     statusFilter.addEventListener("change", filterTrades);
 }
+if (clearFiltersBtn) {
+    clearFiltersBtn.addEventListener("click", () => {
+        if (tradeSearchInput) tradeSearchInput.value = "";
+        if (statusFilter) statusFilter.value = "Status: All";
+
+        filterTrades();
+    });
+}
               const openTradeModal = document.getElementById("openTradeModal");
               const closeTradeModal = document.getElementById("closeTradeModal");
               const cancelTradeModal = document.getElementById("cancelTradeModal");
