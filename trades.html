@@ -469,7 +469,8 @@ function filterTrades() {
     const searchValue = tradeSearchInput ? tradeSearchInput.value.toLowerCase() : "";
     const assetValue = assetFilter ? assetFilter.value.toLowerCase() : "all assets";
     const statusValue = statusFilter ? statusFilter.value.toLowerCase() : "status: all";
-
+    const dateValue = dateFilter ? dateFilter.value.toLowerCase() : "all time";
+    
     const rows = document.querySelectorAll("#tradeTableBody tr");
 
     rows.forEach(row => {
@@ -482,6 +483,7 @@ function filterTrades() {
             rowText.includes(statusValue);
 
         let matchesAsset = true;
+        let matchesDate = true;
 
         if (assetValue === "crypto") {
             matchesAsset =
