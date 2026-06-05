@@ -504,16 +504,21 @@ if (dateFilter) {
 if (clearFiltersBtn) {
     clearFiltersBtn.addEventListener("click", () => {
         const searchBox = document.getElementById("tradeSearchInput");
-        const statusBox = document.getElementById("statusFilter");
 
         if (searchBox) {
             searchBox.value = "";
-            searchBox.dispatchEvent(new Event("input", { bubbles: true }));
         }
 
-        if (statusBox) {
-            statusBox.selectedIndex = 0;
-            statusBox.dispatchEvent(new Event("change", { bubbles: true }));
+        if (assetFilter) {
+            assetFilter.selectedIndex = 0;
+        }
+
+        if (dateFilter) {
+            dateFilter.selectedIndex = 0;
+        }
+
+        if (statusFilter) {
+            statusFilter.selectedIndex = 0;
         }
 
         filterTrades();
