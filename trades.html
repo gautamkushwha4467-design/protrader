@@ -459,9 +459,11 @@
               
 
 const tradeSearchInput = document.getElementById("tradeSearchInput");
+const assetFilter = document.getElementById("assetFilter");
+const dateFilter = document.getElementById("dateFilter");
 const statusFilter = document.getElementById("statusFilter");
 const clearFiltersBtn = document.getElementById("clearFiltersBtn");
-
+          
 function filterTrades() {
     const searchValue = tradeSearchInput ? tradeSearchInput.value.toLowerCase() : "";
     const statusValue = statusFilter ? statusFilter.value.toLowerCase() : "status: all";
@@ -491,6 +493,13 @@ if (tradeSearchInput) {
 
 if (statusFilter) {
     statusFilter.addEventListener("change", filterTrades);
+}
+if (assetFilter) {
+    assetFilter.addEventListener("change", filterTrades);
+}
+
+if (dateFilter) {
+    dateFilter.addEventListener("change", filterTrades);
 }
 if (clearFiltersBtn) {
     clearFiltersBtn.addEventListener("click", () => {
