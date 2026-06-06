@@ -161,11 +161,154 @@ Top Navigation
 <p class="font-body-sm text-secondary mt-2">Peak Concentration</p>
 </div>
 </div>
-<!-- AI Generated Trade Review Cards -->
-<div class="space-y-gutter">
-<div class="flex justify-between items-end">
-<h3 class="font-headline-lg text-title-md text-on-surface">Recent Trade Intelligence</h3>
-<button class="text-secondary font-label-uppercase text-label-uppercase hover:underline">View All Sessions</button>
+<!-- Weekly AI Review -->
+<div class="bg-surface-container-low border border-outline-variant rounded-2xl p-6 shadow-sm">
+  <div class="flex items-center justify-between mb-6">
+    <div>
+      <h3 class="font-title-md text-title-md text-on-surface">Weekly AI Review</h3>
+      <p class="text-body-sm text-on-surface-variant">Summary of your trading behavior and execution quality</p>
+    </div>
+    <div class="text-right">
+      <p class="text-label-uppercase text-on-surface-variant">Overall Grade</p>
+      <h3 class="text-headline-lg font-bold text-tertiary">B+</h3>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    <div class="bg-surface-container-high rounded-xl p-4">
+      <p class="text-label-uppercase text-on-surface-variant">Trades</p>
+      <p class="text-title-md font-bold">32</p>
+    </div>
+    <div class="bg-surface-container-high rounded-xl p-4">
+      <p class="text-label-uppercase text-on-surface-variant">Win Rate</p>
+      <p class="text-title-md font-bold text-tertiary">58%</p>
+    </div>
+    <div class="bg-surface-container-high rounded-xl p-4">
+      <p class="text-label-uppercase text-on-surface-variant">Profit Factor</p>
+      <p class="text-title-md font-bold text-secondary">1.9</p>
+    </div>
+    <div class="bg-surface-container-high rounded-xl p-4">
+      <p class="text-label-uppercase text-on-surface-variant">Best Session</p>
+      <p class="text-title-md font-bold">London</p>
+    </div>
+    <div class="bg-surface-container-high rounded-xl p-4">
+      <p class="text-label-uppercase text-on-surface-variant">Best Setup</p>
+      <p class="text-title-md font-bold">LSR</p>
+    </div>
+  </div>
+</div>
+
+<!-- Mistake Breakdown -->
+<div class="bg-surface-container-low border border-outline-variant rounded-2xl p-6 shadow-sm">
+  <h3 class="font-title-md text-title-md text-on-surface mb-2">Mistake Breakdown</h3>
+  <p class="text-body-sm text-on-surface-variant mb-6">Most repeated execution mistakes this week</p>
+
+  <div class="space-y-5">
+    <div>
+      <div class="flex justify-between mb-2">
+        <span>Early Exit</span>
+        <span class="font-bold text-error">32%</span>
+      </div>
+      <div class="w-full bg-surface-container-high rounded-full h-3">
+        <div class="bg-error h-3 rounded-full" style="width:32%"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex justify-between mb-2">
+        <span>FOMO Entry</span>
+        <span class="font-bold text-secondary">21%</span>
+      </div>
+      <div class="w-full bg-surface-container-high rounded-full h-3">
+        <div class="bg-secondary h-3 rounded-full" style="width:21%"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex justify-between mb-2">
+        <span>Over-Risk</span>
+        <span class="font-bold text-primary">18%</span>
+      </div>
+      <div class="w-full bg-surface-container-high rounded-full h-3">
+        <div class="bg-primary h-3 rounded-full" style="width:18%"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex justify-between mb-2">
+        <span>Revenge Trade</span>
+        <span class="font-bold text-tertiary">12%</span>
+      </div>
+      <div class="w-full bg-surface-container-high rounded-full h-3">
+        <div class="bg-tertiary h-3 rounded-full" style="width:12%"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Psychology Summary -->
+<div class="bg-surface-container-low border border-outline-variant rounded-2xl p-6 shadow-sm">
+  <h3 class="font-title-md text-title-md text-on-surface mb-2">Psychology Summary</h3>
+  <p class="text-body-sm text-on-surface-variant mb-6">Mental state patterns connected with trading performance</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <div class="bg-surface-container-high rounded-xl p-4">
+      <p class="text-label-uppercase text-on-surface-variant">Confidence</p>
+      <p class="text-title-md font-bold text-secondary">8/10</p>
+    </div>
+
+    <div class="bg-surface-container-high rounded-xl p-4">
+      <p class="text-label-uppercase text-on-surface-variant">Discipline</p>
+      <p class="text-title-md font-bold text-tertiary">9/10</p>
+    </div>
+
+    <div class="bg-surface-container-high rounded-xl p-4">
+      <p class="text-label-uppercase text-on-surface-variant">Stress</p>
+      <p class="text-title-md font-bold text-error">3/10</p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="p-4 rounded-xl bg-tertiary-container">
+      <p class="text-label-uppercase text-on-surface-variant">Most Productive Mood</p>
+      <p class="text-title-md font-bold text-tertiary">Calm</p>
+    </div>
+
+    <div class="p-4 rounded-xl bg-error-container">
+      <p class="text-label-uppercase text-on-surface-variant">Most Dangerous Mood</p>
+      <p class="text-title-md font-bold text-error">Anxious</p>
+    </div>
+  </div>
+</div>
+
+<!-- Action Plan -->
+<div class="bg-primary-container border border-outline-variant rounded-2xl p-6 shadow-sm">
+  <div class="flex items-center gap-2 mb-4">
+    <span class="material-symbols-outlined text-primary">task_alt</span>
+    <h3 class="font-title-md text-title-md text-on-secondary-container">Action Plan For Next Week</h3>
+  </div>
+
+  <div class="space-y-4">
+    <div class="flex gap-3">
+      <span class="text-tertiary font-bold">01</span>
+      <p class="text-body-sm text-on-surface">Hold winners to planned target before manually closing.</p>
+    </div>
+
+    <div class="flex gap-3">
+      <span class="text-tertiary font-bold">02</span>
+      <p class="text-body-sm text-on-surface">Stop trading after 2 consecutive losses.</p>
+    </div>
+
+    <div class="flex gap-3">
+      <span class="text-tertiary font-bold">03</span>
+      <p class="text-body-sm text-on-surface">Focus only on London session setups this week.</p>
+    </div>
+
+    <div class="flex gap-3">
+      <span class="text-tertiary font-bold">04</span>
+      <p class="text-body-sm text-on-surface">Avoid counter-trend trades unless full checklist is confirmed.</p>
+    </div>
+  </div>
 </div>
 <!-- Card 1 -->
 <div class="bg-surface-container-low border border-outline-variant rounded-2xl overflow-hidden group hover:border-secondary/50 transition-all">
