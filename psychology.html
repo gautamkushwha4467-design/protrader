@@ -151,20 +151,22 @@ TopAppBar
 <h3 class="font-title-md text-title-md text-on-surface">Daily Mood</h3>
 </div>
 <div class="grid grid-cols-3 gap-unit-md">
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-outline-variant hover:border-tertiary transition-all group active:scale-95">
-<span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-tertiary" data-icon="center_focus_strong">center_focus_strong</span>
-<span class="font-label-uppercase text-on-surface-variant group-hover:text-tertiary">Focused</span>
+<button data-mood="focused" class="mood-btn flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-outline-variant hover:border-tertiary transition-all group active:scale-95">
+  <span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-tertiary" data-icon="center_focus_strong">center_focus_strong</span>
+  <span class="font-label-uppercase text-on-surface-variant group-hover:text-tertiary">Focused</span>
 </button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-secondary-container bg-secondary-container/10 transition-all group active:scale-95">
-<span class="material-symbols-outlined text-[32px] text-secondary" data-icon="self_improvement" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
-<span class="font-label-uppercase text-secondary">Calm</span>
+
+<button data-mood="calm" class="mood-btn selected-mood flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-secondary-container bg-secondary-container/10 transition-all group active:scale-95">
+  <span class="material-symbols-outlined text-[32px] text-secondary" data-icon="self_improvement" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+  <span class="font-label-uppercase text-secondary">Calm</span>
 </button>
-<button class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-outline-variant hover:border-error transition-all group active:scale-95">
-<span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-error" data-icon="bolt">bolt</span>
-<span class="font-label-uppercase text-on-surface-variant group-hover:text-error">Anxious</span>
+
+<button data-mood="anxious" class="mood-btn flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-outline-variant hover:border-error transition-all group active:scale-95">
+  <span class="material-symbols-outlined text-[32px] text-on-surface-variant group-hover:text-error" data-icon="bolt">bolt</span>
+  <span class="font-label-uppercase text-on-surface-variant group-hover:text-error">Anxious</span>
 </button>
 </div>
-<p class="text-body-sm text-on-surface-variant italic">"Current state indicates high discipline for the London session."</p>
+<p id="moodInsight" class="text-body-sm text-on-surface-variant italic">   "Balanced emotional state. Good for disciplined execution." </p>
 </div>
 <!-- Confidence & Discipline Sliders (Span 8) -->
 <div class="lg:col-span-8 bg-surface-container rounded-2xl p-unit-lg border border-outline-variant shadow-sm flex flex-col justify-between">
