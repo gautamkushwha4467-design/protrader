@@ -140,6 +140,52 @@
 <p class="text-body-sm text-on-surface-variant mt-2 italic">Optimized risk-adjusted return</p>
 </div>
 </div>
+<!-- 1. Instrument Profit Analysis -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-low border border-outline-variant rounded-2xl p-unit-lg shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Profit/Loss by Instrument</h3>
+<p class="text-body-sm text-on-surface-variant">Realized net profit across primary pairs</p>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-surface-container-highest rounded text-label-uppercase text-[10px]">MONTHLY</button>
+<button class="px-3 py-1 bg-primary text-on-primary rounded text-label-uppercase text-[10px]">ALL TIME</button>
+</div>
+</div>
+<div class="chart-container flex items-end justify-between px-4 pb-4">
+<!-- EURUSD -->
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-full bg-tertiary/20 border-t-2 border-tertiary rounded-t-sm" style="height: 180px;"></div>
+<span class="font-data-mono text-data-mono text-tertiary">+$4.2k</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">EURUSD</span>
+</div>
+<!-- GOLD -->
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-full bg-tertiary/20 border-t-2 border-tertiary rounded-t-sm" style="height: 140px;"></div>
+<span class="font-data-mono text-data-mono text-tertiary">+$3.1k</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">GOLD</span>
+</div>
+<!-- GBPJPY -->
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-full bg-error/20 border-b-2 border-error rounded-b-sm self-start translate-y-[20px]" style="height: 60px;"></div>
+<span class="font-data-mono text-data-mono text-error">-$1.2k</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">GBPJPY</span>
+</div>
+<!-- BTCUSD -->
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-full bg-tertiary/20 border-t-2 border-tertiary rounded-t-sm" style="height: 90px;"></div>
+<span class="font-data-mono text-data-mono text-tertiary">+$1.8k</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">BTCUSD</span>
+</div>
+<!-- NAS100 -->
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-full bg-tertiary/20 border-t-2 border-tertiary rounded-t-sm" style="height: 110px;"></div>
+<span class="font-data-mono text-data-mono text-tertiary">+$2.4k</span>
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">NAS100</span>
+</div>
+</div>
+</div>
+
   <!-- RR Distribution -->
 
 <div class="col-span-12 bg-surface-container-low border border-outline-variant rounded-2xl p-unit-lg shadow-sm">
@@ -285,51 +331,6 @@
 
     </div>
 
-</div>
-<!-- 1. Instrument Profit Analysis -->
-<div class="col-span-12 lg:col-span-8 bg-surface-container-low border border-outline-variant rounded-2xl p-unit-lg shadow-sm">
-<div class="flex justify-between items-center mb-6">
-<div>
-<h3 class="font-title-md text-title-md text-on-surface">Profit/Loss by Instrument</h3>
-<p class="text-body-sm text-on-surface-variant">Realized net profit across primary pairs</p>
-</div>
-<div class="flex gap-2">
-<button class="px-3 py-1 bg-surface-container-highest rounded text-label-uppercase text-[10px]">MONTHLY</button>
-<button class="px-3 py-1 bg-primary text-on-primary rounded text-label-uppercase text-[10px]">ALL TIME</button>
-</div>
-</div>
-<div class="chart-container flex items-end justify-between px-4 pb-4">
-<!-- EURUSD -->
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="w-full bg-tertiary/20 border-t-2 border-tertiary rounded-t-sm" style="height: 180px;"></div>
-<span class="font-data-mono text-data-mono text-tertiary">+$4.2k</span>
-<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">EURUSD</span>
-</div>
-<!-- GOLD -->
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="w-full bg-tertiary/20 border-t-2 border-tertiary rounded-t-sm" style="height: 140px;"></div>
-<span class="font-data-mono text-data-mono text-tertiary">+$3.1k</span>
-<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">GOLD</span>
-</div>
-<!-- GBPJPY -->
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="w-full bg-error/20 border-b-2 border-error rounded-b-sm self-start translate-y-[20px]" style="height: 60px;"></div>
-<span class="font-data-mono text-data-mono text-error">-$1.2k</span>
-<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">GBPJPY</span>
-</div>
-<!-- BTCUSD -->
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="w-full bg-tertiary/20 border-t-2 border-tertiary rounded-t-sm" style="height: 90px;"></div>
-<span class="font-data-mono text-data-mono text-tertiary">+$1.8k</span>
-<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">BTCUSD</span>
-</div>
-<!-- NAS100 -->
-<div class="flex flex-col items-center gap-2 w-16">
-<div class="w-full bg-tertiary/20 border-t-2 border-tertiary rounded-t-sm" style="height: 110px;"></div>
-<span class="font-data-mono text-data-mono text-tertiary">+$2.4k</span>
-<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">NAS100</span>
-</div>
-</div>
 </div>
 
 <!-- 2. Volume Analysis -->
