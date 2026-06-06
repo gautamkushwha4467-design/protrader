@@ -382,12 +382,40 @@ const moodMessages = {
 moodButtons.forEach(button => {
     button.addEventListener("click", () => {
         moodButtons.forEach(btn => {
-            btn.classList.remove("selected-mood", "border-secondary-container", "bg-secondary-container/10");
-            btn.classList.add("border-outline-variant");
-        });
+    btn.classList.remove(
+        "selected-mood",
+        "border-secondary-container",
+        "bg-secondary-container/10"
+    );
 
-        button.classList.add("selected-mood", "border-secondary-container", "bg-secondary-container/10");
-        button.classList.remove("border-outline-variant");
+    btn.classList.add("border-outline-variant");
+
+    const icon = btn.querySelector(".material-symbols-outlined");
+    const text = btn.querySelector("span:last-child");
+
+    icon?.classList.remove("text-secondary");
+    text?.classList.remove("text-secondary");
+
+    icon?.classList.add("text-on-surface-variant");
+    text?.classList.add("text-on-surface-variant");
+});
+
+        button.classList.add(
+    "selected-mood",
+    "border-secondary-container",
+    "bg-secondary-container/10"
+);
+
+button.classList.remove("border-outline-variant");
+
+const icon = button.querySelector(".material-symbols-outlined");
+const text = button.querySelector("span:last-child");
+
+icon?.classList.remove("text-on-surface-variant");
+text?.classList.remove("text-on-surface-variant");
+
+icon?.classList.add("text-secondary");
+text?.classList.add("text-secondary");
 
         const mood = button.dataset.mood;
 
