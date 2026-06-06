@@ -370,6 +370,32 @@ TopAppBar
         menuBtn?.addEventListener('click', () => {
             alert('Navigation Menu would slide in from left.');
         });
+    const moodButtons = document.querySelectorAll(".mood-btn");
+const moodInsight = document.getElementById("moodInsight");
+
+const moodMessages = {
+    focused: '"Optimal state for executing your trading plan."',
+    calm: '"Balanced emotional state. Good for disciplined execution."',
+    anxious: '"Elevated emotional risk. Consider reducing position size."'
+};
+
+moodButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        moodButtons.forEach(btn => {
+            btn.classList.remove("selected-mood", "border-secondary-container", "bg-secondary-container/10");
+            btn.classList.add("border-outline-variant");
+        });
+
+        button.classList.add("selected-mood", "border-secondary-container", "bg-secondary-container/10");
+        button.classList.remove("border-outline-variant");
+
+        const mood = button.dataset.mood;
+
+        if (moodInsight) {
+            moodInsight.textContent = moodMessages[mood];
+        }
+    });
+});
     </script>
 </body>
 </html>
