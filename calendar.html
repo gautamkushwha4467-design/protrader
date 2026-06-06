@@ -56,11 +56,11 @@
 <!-- Management Controls -->
 <div class="flex flex-wrap items-center justify-between gap-4">
 <div class="flex items-center gap-3">
-<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high border border-outline-variant rounded-xl text-on-surface hover:bg-surface-bright transition-all">
+<button id="importTradesBtn" class="flex items-center gap-2 px-4 py-2 bg-surface-container-high border border-outline-variant rounded-xl text-on-surface hover:bg-surface-bright transition-all">
 <span class="material-symbols-outlined">upload_file</span>
 <span class="font-label-uppercase text-xs">Import Trades</span>
 </button>
-<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high border border-outline-variant rounded-xl text-on-surface hover:bg-surface-bright transition-all">
+<button id="exportReportBtn" class="flex items-center gap-2 px-4 py-2 bg-surface-container-high border border-outline-variant rounded-xl text-on-surface hover:bg-surface-bright transition-all">
 <span class="material-symbols-outlined">download</span>
 <span class="font-label-uppercase text-xs">Export Report</span>
 </button>
@@ -421,6 +421,20 @@
                 item.classList.remove('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-high');
             });
         });
+  const importTradesBtn = document.getElementById("importTradesBtn");
+const exportReportBtn = document.getElementById("exportReportBtn");
+
+if (importTradesBtn) {
+  importTradesBtn.addEventListener("click", () => {
+    alert("Import Trades will be available after backend integration.");
+  });
+}
+
+if (exportReportBtn) {
+  exportReportBtn.addEventListener("click", () => {
+    alert("Export Report will be available after backend integration.");
+  });
+}
     </script>
 </body>
 </html>
