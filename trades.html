@@ -840,6 +840,27 @@ paginationButtons.forEach((btn) => {
         alert("Pagination will be available after backend integration.");
     });
 });
+const tradeModal = document.getElementById("tradeDetailsModal");
+const closeTradeModal = document.getElementById("closeTradeModal");
+
+document.querySelectorAll(".trade-row").forEach(row => {
+    row.addEventListener("click", () => {
+        tradeModal.classList.remove("hidden");
+        tradeModal.classList.add("flex");
+    });
+});
+
+closeTradeModal.addEventListener("click", () => {
+    tradeModal.classList.add("hidden");
+    tradeModal.classList.remove("flex");
+});
+
+tradeModal.addEventListener("click", (e) => {
+    if (e.target === tradeModal) {
+        tradeModal.classList.add("hidden");
+        tradeModal.classList.remove("flex");
+    }
+});
     </script>
   <!-- Trade Details Modal -->
 <div id="tradeDetailsModal"
