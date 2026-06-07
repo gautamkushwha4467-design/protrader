@@ -843,9 +843,9 @@ paginationButtons.forEach((btn) => {
     });
 });
 const tradeModal = document.getElementById("tradeDetailsModal");
-const closeAddTradeModal = document.getElementById("closeAddTradeModal");
+const closeAddTradeModal = document.getElementById("closeTradeDetailsModal");
 
-if (tradeModal && closeAddTradeModal) {
+if (tradeModal && closeTradeDetailsModal) {
     document.querySelectorAll(".trade-row").forEach(row => {
         row.addEventListener("click", () => {
             tradeModal.classList.remove("hidden");
@@ -853,7 +853,7 @@ if (tradeModal && closeAddTradeModal) {
         });
     });
 
-    closeAddTradeModal.addEventListener("click", () => {
+    closeTradeDetailsModal.addEventListener("click", () => {
         tradeModal.classList.add("hidden");
         tradeModal.classList.remove("flex");
     });
@@ -875,7 +875,7 @@ if (tradeModal && closeAddTradeModal) {
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-2xl font-bold">Trade Details</h2>
 
-            <button id="closeAddTradeModal"
+          <button id="closeTradeDetailsModal">
                 class="text-on-surface-variant hover:text-on-surface">
                 ✕
             </button>
