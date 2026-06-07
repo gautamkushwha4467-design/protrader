@@ -842,30 +842,7 @@ paginationButtons.forEach((btn) => {
         alert("Pagination will be available after backend integration.");
     });
 });
-const tradeModal = document.getElementById("tradeDetailsModal");
-const closeTradeDetailsModal = document.getElementById("closeTradeDetailsModal");
-
-if (tradeModal && closeTradeDetailsModal) {
-    document.querySelectorAll(".trade-row").forEach(row => {
-        row.addEventListener("click", () => {
-            tradeModal.classList.remove("hidden");
-            tradeModal.classList.add("flex");
-        });
-    });
-
-    closeTradeDetailsModal.addEventListener("click", () => {
-        tradeModal.classList.add("hidden");
-        tradeModal.classList.remove("flex");
-    });
-
-    tradeModal.addEventListener("click", (e) => {
-        if (e.target === tradeModal) {
-            tradeModal.classList.add("hidden");
-            tradeModal.classList.remove("flex");
-        }
-    });
-}
- </script>
+</script>
   <!-- Trade Details Modal -->
 <div id="tradeDetailsModal"
      class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[100]">
@@ -942,5 +919,30 @@ if (tradeModal && closeTradeDetailsModal) {
     </div>
 
 </div>
+  <script>
+       const tradeModal = document.getElementById("tradeDetailsModal");
+const closeTradeDetailsModal = document.getElementById("closeTradeDetailsModal");
+
+if (tradeModal && closeTradeDetailsModal) {
+    document.querySelectorAll(".trade-row").forEach(row => {
+        row.addEventListener("click", () => {
+            tradeModal.classList.remove("hidden");
+            tradeModal.classList.add("flex");
+        });
+    });
+
+    closeTradeDetailsModal.addEventListener("click", () => {
+        tradeModal.classList.add("hidden");
+        tradeModal.classList.remove("flex");
+    });
+
+    tradeModal.addEventListener("click", (e) => {
+        if (e.target === tradeModal) {
+            tradeModal.classList.add("hidden");
+            tradeModal.classList.remove("flex");
+        }
+    });
+}
+ </script>
 </body>
 </html>
