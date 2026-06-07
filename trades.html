@@ -371,7 +371,7 @@
         <h3 class="text-title-md font-bold text-on-surface">Log Trade</h3>
         <p class="text-body-sm text-on-surface-variant">Complete trade journal entry</p>
       </div>
-      <button id="closeTradeModal" class="p-2 rounded-full hover:bg-surface-container-high text-on-surface-variant">
+      <button id="closeAddTradeModal" class="p-2 rounded-full hover:bg-surface-container-high text-on-surface-variant">
         <span class="material-symbols-outlined">close</span>
       </button>
     </div>
@@ -650,7 +650,7 @@ if (clearFiltersBtn) {
     });
 }
               const openTradeModal = document.getElementById("openTradeModal");
-              const closeTradeModal = document.getElementById("closeTradeModal");
+              const closeAddTradeModal = document.getElementById("closeAddTradeModal");
               const cancelTradeModal = document.getElementById("cancelTradeModal");
               const tradeModal = document.getElementById("tradeModal");
 
@@ -667,7 +667,7 @@ function closeModal() {
 }
 
 if (closeTradeModal) {
-    closeTradeModal.addEventListener("click", closeModal);
+    closeAddTradeModal.addEventListener("click", closeModal);
 }
 
 if (cancelTradeModal) {
@@ -843,9 +843,9 @@ paginationButtons.forEach((btn) => {
     });
 });
 const tradeModal = document.getElementById("tradeDetailsModal");
-const closeTradeModal = document.getElementById("closeTradeModal");
+const closeAddTradeModal = document.getElementById("closeAddTradeModal");
 
-if (tradeModal && closeTradeModal) {
+if (tradeModal && closeAddTradeModal) {
     document.querySelectorAll(".trade-row").forEach(row => {
         row.addEventListener("click", () => {
             tradeModal.classList.remove("hidden");
@@ -853,7 +853,7 @@ if (tradeModal && closeTradeModal) {
         });
     });
 
-    closeTradeModal.addEventListener("click", () => {
+    closeAddTradeModal.addEventListener("click", () => {
         tradeModal.classList.add("hidden");
         tradeModal.classList.remove("flex");
     });
@@ -875,7 +875,7 @@ if (tradeModal && closeTradeModal) {
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-2xl font-bold">Trade Details</h2>
 
-            <button id="closeTradeModal"
+            <button id="closeAddTradeModal"
                 class="text-on-surface-variant hover:text-on-surface">
                 ✕
             </button>
