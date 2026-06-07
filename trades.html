@@ -841,5 +841,82 @@ paginationButtons.forEach((btn) => {
     });
 });
     </script>
+  <!-- Trade Details Modal -->
+<div id="tradeDetailsModal"
+     class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[100]">
+
+    <div class="bg-surface-container border border-outline-variant rounded-2xl p-6 w-full max-w-3xl mx-4">
+
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Trade Details</h2>
+
+            <button id="closeTradeModal"
+                class="text-on-surface-variant hover:text-on-surface">
+                ✕
+            </button>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+
+            <div>
+                <p class="text-sm text-on-surface-variant">Instrument</p>
+                <p class="font-bold text-lg">BTC/USDT</p>
+            </div>
+
+            <div>
+                <p class="text-sm text-on-surface-variant">Direction</p>
+                <p class="font-bold text-tertiary">LONG</p>
+            </div>
+
+            <div>
+                <p class="text-sm text-on-surface-variant">Entry Price</p>
+                <p>$34,120</p>
+            </div>
+
+            <div>
+                <p class="text-sm text-on-surface-variant">Exit Price</p>
+                <p>$35,450</p>
+            </div>
+
+            <div>
+                <p class="text-sm text-on-surface-variant">RR</p>
+                <p>3.2R</p>
+            </div>
+
+            <div>
+                <p class="text-sm text-on-surface-variant">P&L</p>
+                <p class="text-tertiary font-bold">+$1,995</p>
+            </div>
+
+        </div>
+
+        <div class="mt-6">
+            <h3 class="font-bold mb-2">Setup Tags</h3>
+
+            <div class="flex gap-2 flex-wrap">
+                <span class="px-3 py-1 rounded-full bg-primary/20">Breakout</span>
+                <span class="px-3 py-1 rounded-full bg-primary/20">London Open</span>
+            </div>
+        </div>
+
+        <div class="mt-6">
+            <h3 class="font-bold mb-2">Trade Notes</h3>
+
+            <div class="bg-surface-container-low rounded-xl p-4">
+                Price respected daily support and confirmed momentum before entry.
+            </div>
+        </div>
+
+        <div class="mt-6">
+            <h3 class="font-bold mb-2">Screenshot</h3>
+
+            <div class="h-40 rounded-xl bg-surface-container-low flex items-center justify-center">
+                Screenshot Placeholder
+            </div>
+        </div>
+
+    </div>
+
+</div>
 </body>
 </html>
