@@ -548,8 +548,10 @@
             const rows = document.querySelectorAll('tbody tr');
             rows.forEach(row => {
                 row.addEventListener('click', () => {
-                    // Placeholder for row detail expansion
-                    console.log('Open trade details for selected row');
+              const tradeModal = document.getElementById("tradeDetailsModal");
+
+                tradeModal.classList.remove("hidden");
+                tradeModal.classList.add("flex");
                 });
               });
               
